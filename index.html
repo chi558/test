@@ -175,60 +175,12 @@
                 </p>
                 <div class="box m-5">
                     <div class="content has-text-centered">
-                      <img src="static/images/logic_table.jpg" alt="RL results" class="center" width="92%"/>
+                      <img src="static/images/logic_table1.jpg" alt="RL results" class="center" width="92%"/>
                     </div>
                   </div>
               </div>
             </div>
           </div>
-
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3">Comparison with existing RM</h2>
-              <div class="content has-text-justified">
-                <p>
-                  Existing top-ranked reward models on Reward Bench can perform pretty bad for best-of-N sampling in the coding scenarion, and sometime can underperform the greedy results. However, our AceCodeRM-7B consistently outperform them with an average of <b>6.9</b> improvement 
-                </p>
-                <div class="box m-5">
-                    <div class="content has-text-centered">
-                      <img src="static/images/ac_table4.png" alt="Comparion with other RM" class="center" width="80%"/>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3">Test case filtering matters</h2>
-              <div class="content has-text-justified">
-                <p>
-                  We also conduct experiments to investigate how filtering the test cases with a proxy model can affect the results. As shown in table, training RM on data after the filtering improve the performance significantly, especially for those hard code questions like MBPP-Plus and BigCodeBench-Hard (C/I). We believe this is because the test case filtering can ensure the remaining ones are consistent with each other and thus point to the same implicit program, which improves the quality of the rewards. 
-                </p>
-                <div class="box m-5">
-                    <div class="content has-text-centered">
-                      <img src="static/images/ac_table5.png" alt="Test case filtering matters" class="center" width="80%"/>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3">RM backbone matters</h2>
-              <div class="content has-text-justified">
-                <p>
-                  We show that Qwen2.5-Coder is a better backbone for the reward model compared to Llama-3.1-8B. This is because the Qwen2.5-Coder models have been pre-trained on way more code-related data compared to the Llama-3.1 models, and thus more knowledgeable when tuning it into a reward model.
-                </p>
-                <div class="box m-5">
-                    <div class="content has-text-centered">
-                      <img src="static/images/ac_table6.png" alt="RM Backbone Matters" class="center" width="80%"/>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div> -->
 
         </div>
       </section>
@@ -239,11 +191,11 @@
             <h2 class="title">Reference</h2>
             Please kindly cite our paper if you use our code or results:
             <pre><code>@article{AceCoder,
-    title={AceCoder: Acing Coder RL via Automated Test-Case Synthesis},
-    author={Zeng, Huaye and Jiang, Dongfu and Wang, Haozhe and Nie, Ping and Chen, Xiaotong and Chen, Wenhu},
+    title={Critique-Coder: Enhancing Coder Models by Critique Reinforcement Learning},
+    author={Ruan, Chi and Jiang, Dongfu and Wang, Yubo and Chen, Wenhu},
     journal={ArXiv},
     year={2025},
-    volume={2502.01718}
+    volume={2509.22824}
 }</code></pre>
         </div>
     </section>
