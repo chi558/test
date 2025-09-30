@@ -143,7 +143,7 @@
                 </p>
                 <div class="content has-text-centered">
                     <img src="static/images/crl_teaser.jpg" alt="algebraic reasoning" width="100%"/>
-                    <p> Overall Workflow of our model: We start from the seed code dataset to create well-formatted questions and corresponding test cases. Then we adopt strong models like GPT-4o-mini to filter the noisy test cases. Finally, we adopt these test cases to harvest positive and negative program pairs for reward model training and RL.</p>
+                    <p> Comparison between CRL and Standard RL. Standard RL generates solutions based on input questions and evaluates them by executing test cases, while CRL critiques the solution for the paired question and compares the resulting conclusion with the GT to determine its correctness. Experiment shows that RL+CRL can improve not only accuracy, but also the code quality.</p>
                 </div>
               </div>
             </div>
