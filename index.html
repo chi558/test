@@ -154,7 +154,7 @@
               <h2 class="title is-3">Critique-Coder Results</h2>
               <div class="content has-text-justified">
                 <p>
-                    We trained two reward model <a href="https://huggingface.co/TIGER-Lab/AceCodeRM-7B">AceCodeRM-7B</a> and <a href="https://huggingface.co/TIGER-Lab/AceCodeRM-32B">AceCodeRM-32B</a> on the constructed <a href="https://huggingface.co/datasets/TIGER-Lab/AceCodePair-300K">preference pairs</a>. We evaluate the performance of our reward models through the best-of-N experiments on the 4 popular coding benchmarks. Results show consistent improvement across all benchmarks, demonstrating the effectiveness of our reward models.
+                    We conducted experiments on two models, Qwen3-4B and Qwen3-8B, in thinking mode. Compared with the base models, Critique-Coder leads to consistent and notable improvements across benchmarks of varying difficulty levels. On Qwen3-4B, for example, the LiveCodeBench score of Critique-Coder rises from 54.2 to 59.0, a gain of +4.8, surpassing the larger Qwen3-8B baseline by +1.5 points. Under identical datasets and training configurations, replacing part of the RL data with CRL consistently yields superior results across all benchmarks. On Qwen3-4B, Critique-Coder exceeds the Qwen3-4B-RL by +2.4 points on LiveCodeBench and improves the overall benchmark average by +1.5 points.
                 </p>
                 <div class="box m-5">
                     <div class="content has-text-centered">
@@ -171,7 +171,7 @@
               <h2 class="title is-3">Logic Reasoning Results</h2>
               <div class="content has-text-justified">
                 <p>
-                    We perform RL training from three policy models: <a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct">Qwen2.5-7B-Instruct</a> and <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-7B">Qwen2.5-Coder-7B-Base</a> and <a href="https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct">Qwen2.5-Coder-7B-Instruct</a>. Two types of reward can be used, i.e. the trained reward model RM-7B and the rule-based reward, i.e. pass rate over the test cases in dataset. During training, we set the pass rate to be a binary reward, which is 1.0 when all test cases passed, otherwise 0. Similar to DeepSeek-R1, we also experiment with RL from the base model because SFT may cause the search space of the model to be stuck in the local minimum. Since coding is also a highly verifiable task like math, we include the Qwen2.5-Coder-7B-Base in our experiments. We see consisteny performance improvement across all benchmarks. And directly RL from the Base Qwen2.5-Coder model can get <b>25%</b> improvement on HumanEval-plus and <b>6%</b> on MBPP-plus within just <b>80</b> optimization steps.
+                    To examine whether the critique and reasoning abilities learned by Critique-Coder extend beyond coding tasks, we further evaluate the model on the BIG-Bench Extra Hard (BBEH) logic reasoning benchmarks. As shown in the table, Critique-Coder achieves consistent improvements over both the baseline Qwen3-4B and its RL-trained variant across all four reasoning subtasks.
                 </p>
                 <div class="box m-5">
                     <div class="content has-text-centered">
